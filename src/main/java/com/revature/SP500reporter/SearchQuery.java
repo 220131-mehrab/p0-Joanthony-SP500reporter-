@@ -2,6 +2,7 @@ package com.revature.SP500reporter;
 
 
 import javax.management.Query;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -28,7 +29,7 @@ public class SearchQuery {
         List<String> stocks = null;
         try {
             stocks = Files.readAllLines(filepath, StandardCharsets.UTF_8);
-        } catch (IOException e) {
+        }  catch (IOException e) {
             e.printStackTrace();
         }
         //printing All lines in csv file

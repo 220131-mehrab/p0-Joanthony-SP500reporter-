@@ -14,12 +14,27 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        double netBalance = 5000;
+        String fName = "Forest";
+        String lName = "Whitacker";
+        String companyName = "Sicilian Capital";
+        double indivAcctBalance = 5000;
         double availableCash = 260.55;
-        System.out.println("Your portfolio net balance:" + " " + netBalance + "\n" + "Your available cash:" + " " + availableCash);
+        System.out.println( "Welcome back to" + " " + companyName + "," + "Mr." + lName + "!");
+        System.out.println("\n" + "Your individual account balance is:" + " " + indivAcctBalance + "\n" + "Your available cash:" + " " + availableCash
+            + "\n");
+
 
         SearchQuery searchQuery = new SearchQuery();
         searchQuery.search();
+
+        double price = 44.28;
+        double budgetPerCompany = 50.00;
+        boolean potentialInvestment = price <= budgetPerCompany;
+            if (potentialInvestment) {
+                System.out.println("\n" + "This company is in your budget!" + "\n" + "Would you like to look at the financial history?");
+            } else {
+                System.out.println("\n" + "This company is not in your budget");
+            }
     }
 
 }

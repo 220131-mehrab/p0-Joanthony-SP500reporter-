@@ -1,7 +1,7 @@
 #S&P 500 Reporter 
 A java program that displays the financial mechanism offered by an online brokerage.
 
-User Stories
+#User Stories
 "Who owns this account?"
 "Can I see my account balance and available cash to invest with?"
 "Should I invest in this company?"

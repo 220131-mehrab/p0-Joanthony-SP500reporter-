@@ -6,12 +6,8 @@ public class App {
     public static void main(String[] args) {
         UserDemo userDemo = new UserDemo();
         ReporterRepository reporterRepository = new ReporterRepository("SP500finacials.csv");
-
-
-        Tomcat server = new Tomcat();
-        server.getConnector();
-        server.addContext("",null);
-        //server.addServlet("","defaultServlet",new ReporterRepository()).addMapping("/reporter");
+        ReporterService reporterService = new ReporterService(reporterRepository);
+        ReporterServer reporterServer = new ReporterServer(reporterService);
 
     }
 

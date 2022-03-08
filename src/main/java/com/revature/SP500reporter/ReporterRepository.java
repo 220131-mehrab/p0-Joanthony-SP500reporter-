@@ -31,7 +31,7 @@ public class ReporterRepository {
         }
     }
     catch(NullPointerException e) {
-        System.out.println("caught null pointer exception");
+        e.printStackTrace();
     }
     }
 

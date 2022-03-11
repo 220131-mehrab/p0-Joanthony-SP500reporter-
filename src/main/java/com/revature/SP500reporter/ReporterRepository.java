@@ -21,23 +21,40 @@ public class ReporterRepository {
     }
 
     private void load() {
-        Scanner scanner = new Scanner(this.file,"UTF-8");
+        Scanner scanner = new Scanner(this.file);
         scanner.useDelimiter("\n");
-    try {
         while (scanner.hasNext()) {
             this.stocks.add(scanner.next());
-
-
         }
-    }
-    catch(NullPointerException e) {
-        e.printStackTrace();
-    }
     }
 
     public List<String> getStocks() {
         return this.stocks;
     }
+
+    public String getStock(String userInput) {
+        String result = "";
+        for (String stock : this.stocks){
+            if (stock.contains(userInput)) {
+                result = userInput;
+            }
+        }
+        return result;
+    }
+
+    public String getCompany(String userInput) {
+        String result = "";
+        for (String company : this.stocks){
+            if (company.contains(userInput)) {
+                result = userInput;
+            }
+        }
+        return result;
+    }
+
+
+
+
 
         //printing All lines in csv file
         //stocks.forEach(System.out::println);
@@ -45,8 +62,4 @@ public class ReporterRepository {
     public ReporterRepository(){
 
     }
-
-
-    //}
-
 }

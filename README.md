@@ -11,4 +11,9 @@ displays account information (name, acct balance, etc.)
 displays companies on the S&P 500 list 
 Displays search in browser 
 
+#Answer these...
+what problems you solved? 
+how you solved th problems?
+what was your logic behind it?
+
 
